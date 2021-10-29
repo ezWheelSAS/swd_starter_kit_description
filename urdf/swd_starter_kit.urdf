@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF describes the SWD Starter Kit robot, the robot mesh is linked to
+     the base_link, the swd_left_link, swd_right_link, lidar_link are not
+     connected ot a visual object, however, the parts are drawn in the main mesh -->
+
+<robot name="swd_starter_kit">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://swd_starter_kit_description/meshes/starter_kit.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://swd_starter_kit_description/meshes/starter_kit.stl" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="swd_left_link"></link>
+
+  <joint name="base_swd_left_link" type="fixed">
+    <origin xyz="0. 0.2483 -0.074" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="swd_left_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="swd_right_link"></link>
+
+  <joint name="base_swd_right_link" type="fixed">
+    <origin xyz="0 -0.2483 -0.074" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="swd_right_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="lidar_link">
+
+  </link>
+  <joint name="base_lidar_link" type="fixed">
+    <origin xyz="0.044 0 -0.0269" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="lidar_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+</robot>
