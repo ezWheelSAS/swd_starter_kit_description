@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+  <arg name="model" />
+
+  <param name="robot_description" textfile="$(find swd_starter_kit_description)/urdf/swd_starter_kit.urdf" />
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+        if="$(arg gui)"/>
+
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"
+        if="$(arg gui)"/>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find swd_starter_kit_description)/urdf.rviz"
+        if="$(arg gui)"/>
+</launch>
