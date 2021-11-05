@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema" ?>
+
 <package format="2">
   <name>swd_starter_kit_description</name>
 
@@ -9,9 +11,10 @@
   </description>
 
   <maintainer email="a.bougouffa@ez-wheel.com">Abdelhak BOUGOUFFA</maintainer>
-  <author email="a.bougouffa@ez-wheel.com">Abdelhak BOUGOUFFA</author>
 
   <license>GPLv2</license>
+
+  <author email="a.bougouffa@ez-wheel.com">Abdelhak BOUGOUFFA</author>
 
   <buildtool_depend>catkin</buildtool_depend>
   <depend>roslaunch</depend>
