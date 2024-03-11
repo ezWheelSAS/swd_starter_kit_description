@@ -6,7 +6,7 @@ The URDF contains also contains the collision model and is suitable for Gazebo s
 ## Dependent Packages
 Install dependent ROS packages:
 ```
-sudo apt install ros-noetic-joy ros-noetic-teleop-twist-joy ros-noetic-hector-mapping ros-noetic-navigation ros-noetic-gazebo-ros
+sudo apt install ros-noetic-gazebo-ros
 ```
 
 ## Quickstart
