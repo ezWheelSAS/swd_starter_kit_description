@@ -6,6 +6,8 @@
 
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
         if="$(arg gui)"/>
+  
+  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" />
 
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find swd_starter_kit_description)/config/swd_starter_kit.rviz"
         if="$(arg gui)"/>
