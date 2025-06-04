@@ -212,14 +212,14 @@
     </plugin>
   </gazebo>
 
-  <joint name="base_lidar_link" type="fixed">
+  <joint name="base_laser" type="fixed">
     <origin xyz="0.05 0 0.2" rpy="0 0 0" />
     <parent link="base_link" />
-    <child link="lidar_link" />
+    <child link="laser" />
     <axis xyz="0 0 0" />
   </joint>
 
-  <link name="lidar_link">
+  <link name="laser">
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -236,7 +236,7 @@
     </inertial>
   </link>
 
-  <gazebo reference="lidar_link">
+  <gazebo reference="laser">
     <material>Gazebo/FlatBlack</material>
     <sensor type="ray" name="lidar_sensor">
       <pose>0 0 0 0 0 0</pose>
@@ -264,7 +264,7 @@
       </ray>
       <plugin name="laser_controller" filename="libgazebo_ros_laser.so">
         <topicName>scan</topicName>
-        <frameName>lidar_link</frameName>
+        <frameName>laser</frameName>
       </plugin>
     </sensor>
   </gazebo>
